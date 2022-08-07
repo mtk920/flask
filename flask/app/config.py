@@ -1,3 +1,5 @@
+#coding:utf8
+
 import os
 from flask_appbuilder.security.manager import (
     AUTH_OID,
@@ -13,8 +15,8 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 SECRET_KEY = "\2\1thisismyscretkey\1\2\e\y\y\h"
 
 # The SQLAlchemy connection string.
-SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(basedir, "app.db")
-# SQLALCHEMY_DATABASE_URI = 'mysql://myapp@localhost/myapp'
+# SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(basedir, "app.db")
+SQLALCHEMY_DATABASE_URI = 'mysql://root:root@db/app'
 # SQLALCHEMY_DATABASE_URI = 'postgresql://root:password@localhost/myapp'
 
 # Flask-WTF flag for CSRF
@@ -64,7 +66,7 @@ AUTH_TYPE = AUTH_DB
 # Babel config for translations
 # ---------------------------------------------------
 # Setup default language
-BABEL_DEFAULT_LOCALE = "en"
+BABEL_DEFAULT_LOCALE = "ja"
 # Your application default translation path
 BABEL_DEFAULT_FOLDER = "translations"
 # The allowed translation for you app
@@ -77,6 +79,7 @@ LANGUAGES = {
     "zh": {"flag": "cn", "name": "Chinese"},
     "ru": {"flag": "ru", "name": "Russian"},
     "pl": {"flag": "pl", "name": "Polish"},
+    "ja": {"flag": "jp", "name": u"日本語"},
 }
 # ---------------------------------------------------
 # Image and file configuration
